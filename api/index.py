@@ -54,7 +54,7 @@ def parse_date(raw: str):
 # "Label: value" line. Using whole-word matches (\b) so "GST" doesn't match
 # inside "IGST" incorrectly and "Tax" doesn't match inside "Tax Invoice"
 # (that line has no colon anyway, so it's skipped automatically).
-INVOICE_NO_WORDS = r"\b(invoice|inv|ref|reference|order)\b"
+INVOICE_NO_WORDS = r"\b(invoice|inv|ref|reference|order|receipt)\b"
 BILL_NO_WORDS = r"\bbill\b.*\b(no\.?|number|#|id)\b"
 INVOICE_NO_EXCLUDE = r"\b(date|amount|total|tax|vendor|seller|address|currency)\b"
 
